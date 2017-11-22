@@ -73,10 +73,6 @@ class ValueIterationAgent(ValueEstimationAgent):
           value function stored in self.values.
         """
 
-        print('states', self.mdp.getStates())
-        print('%%%%%%%%%%%%%%%')
-        print('values', self.values)
-
         totalSum = 0
         for nextState, prob in self.mdp.getTransitionStatesAndProbs(state, action):
             if not prob == 0:
